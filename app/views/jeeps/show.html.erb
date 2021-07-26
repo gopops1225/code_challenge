@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time Remaining:</strong>
+  <%= @jeep.time_remaining %>
+</p>
+
+<p>
+  <strong>Name :</strong>
+  <%= @jeep.name %>
+</p>
+
+<p>
+  <strong>Bids:</strong>
+  <%= @jeep.bids %>
+</p>
+
+<p>
+  <strong>Miles:</strong>
+  <%= @jeep.miles %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency(@jeep.price) %>
+</p>
+
+<p>
+  <strong>Price After Tax:</strong>
+  <%= number_to_currency(@jeep.price_after_tax) %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @jeep.year %>
+</p>
+
+<%= link_to 'Back', jeeps_path %>

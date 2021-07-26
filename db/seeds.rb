@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Jeep.destroy_all
+jeep_collection = ClReader.new().get_jeep_listing
+Jeep.create_bulk_jeeps(jeep_collection)
