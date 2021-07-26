@@ -1,5 +1,4 @@
 class Jeep < ApplicationRecord
-  require 'pry-rails'
 
   def self.create_bulk_jeeps(jeep_collection)
     jeep_collection.each do |jeep|
