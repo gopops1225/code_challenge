@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>jeeps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time Remaining</th>
+      <th>Name</th>
+      <th>Bids</th>
+      <th>Miles</th>
+      <th>Price</th>
+      <th>Price After Tax</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jeeps.each do |jeep| %>
+      <tr>
+        <td><%= jeep.time_remaining %></td>
+        <td><%= jeep.name %></td>
+        <td><%= jeep.bids %></td>
+        <td><%= jeep.miles %></td>
+        <td><%= number_to_currency(jeep.price) %></td>
+        <td><%= number_to_currency(jeep.price_after_tax) %></td>
+        <td><%= jeep.year %></td>
+        <td><%= link_to 'Show', jeep %></td>
+        <td><%= link_to 'Destroy', jeep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New jeep', new_jeep_path %>
